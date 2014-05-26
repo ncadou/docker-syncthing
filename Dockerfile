@@ -13,8 +13,8 @@ RUN apt-get update && \
     apt-get install -y wget && \
     apt-get clean
 
-ENV VERSION v0.8.10
-ENV RELEASE syncthing-linux-amd64-v0.8.10
+ENV VERSION v0.8.11
+ENV RELEASE syncthing-linux-amd64-v0.8.11
 
 # Using wget because an ADD step with a URL isn't cached by docker build.
 RUN wget -O /$RELEASE.tar.gz \
