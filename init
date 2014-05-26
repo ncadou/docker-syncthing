@@ -1,0 +1,9 @@
+#!/bin/sh
+export HOME=/home/syncthing
+cd $HOME
+for DIR in Sync .config/syncthing; do
+    test -d $DIR || mkdir -p $DIR
+    chown syncthing:syncthing $DIR
+    chmod 750 $DIR
+done
+exec su - syncthing -c /usr/local/bin/syncthing
